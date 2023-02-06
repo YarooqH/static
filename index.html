@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script src='https://cdn.jsdelivr.net/npm/voltox-sdk@1.2.2/vanilla.min.js' async defer ></script>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+<head>
+    <title>Voltox Login Demo</title>
+</head>
+<body>
+    <!-- Create a custom button and pass login function to the click listener -->
+    <div class="container">
+
+  </div>
+
+    <div class="container">
+      <form class="form">
+        <button id="login-button"><img src="./logo-gradient_btn.png"> Sign in with Voltox </button>
+
+
+      </form>
+    </div>
+
+
+    <script src="main.js"></script>
+
+    <script async defer src="https://cdn.jsdelivr.net/npm/voltox-sdk@1.2.2/vanilla.min.js"></script>
+
+    <script async defer id="scriptTag" src="https://cdn.jsdelivr.net/npm/voltox-sdk@1.2.2/vanilla.min.js"></script>
+    <script>
+        const tag = document.getElementById("scriptTag");
+        tag.addEventListener("load", (e) =>{
+            
+            const button = document.getElementById("login-button");
+            button.addEventListener("click", () =>{
+    
+                //Pass Hash Code as first parameter of login function
+                //You'll receive user credentials in callback function 
+                //when the user is authenticated or error if any problem 
+                //occurs. Once you receive the credentials, pass it to 
+                //getDecodedData function imported from voltox-sdk
+                //You'll receive decoded user data in callback function
+                
+                //NOTE: You can use getDecodedData function on either server or client side
+    
+                const hashCode = 'z4Xcqq0/LHpUV/qweqCPEIkK7Exvaaaaaah193V2qwe';
+                login(hashCode, (response) => {
+                  if (response?.success) {
+                    getDecodedData(hashCode, response?.credentials, (decodedData) => {
+                      console.log(decodedData)
+                    });
+                  }
+                });
+            
+            });
+        });
+    </script>
+    
+</body>
+</html>

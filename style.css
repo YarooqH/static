@@ -1,0 +1,93 @@
+/* Buttons */
+
+#login-button {
+display: flex;
+align-items: center;
+height: 46px;
+text-align: center;
+cursor: pointer;
+outline: 0;
+text-align: center;
+background-color: rgb(251, 249, 249);
+border: 1px solid transparent;
+padding: 5px 5px;
+font-size: 14px;
+border-radius: .35rem;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+color: #8a8a8a;
+border-color: #0e69c3;
+align-self: center;
+font-family: 'Roboto', sans-serif;
+}
+
+#login-button:hover {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    transition: transform .4s;
+    transform: scale(1.02);
+}
+
+
+img {
+  height: 18px;
+  padding-top: 3px;
+  padding-right: 5px;
+}
+
+/* Animation, aesthetic only */
+
+body {
+  background: linear-gradient(95deg, #0e7dac, #00ffff, #004968);
+  background-size: 600% 600%;
+
+  -webkit-animation: VoltoxBackgroundAnimation 5s ease infinite;
+  -moz-animation: VoltoxBackgroundAnimation 5s ease infinite;
+  animation: VoltoxBackgroundAnimation 15s ease infinite;
+}
+
+@-webkit-keyframes VoltoxBackgroundAnimation {
+  0%{background-position:32% 0%}
+  50%{background-position:69% 100%}
+  100%{background-position:32% 0%}
+}
+@-moz-keyframes VoltoxBackgroundAnimation {
+  0%{background-position:32% 0%}
+  50%{background-position:69% 100%}
+  100%{background-position:32% 0%}
+}
+@keyframes VoltoxBackgroundAnimation {
+  0%{background-position:32% 0%}
+  50%{background-position:69% 100%}
+  100%{background-position:32% 0%}
+}
+
+
+/* Container & form, aesthetic only */
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: -10px -11px 58px -1px rgba(52,58,65,0.2);
+  -webkit-box-shadow: -10px -11px 58px -1px rgba(52,58,65,0.2);
+  -moz-box-shadow: -10px -11px 58px -1px rgba(52,58,65,0.2);
+  border-radius: 10px;
+}
+
+
+form{
+	padding: 20px 10px;
+	position: relative; 
+	z-index: 2;
+  background-color: #eff0f1;
+
+  box-shadow: 3px 7px 19px 5px rgba(17, 60, 108, 0.9);
+  border-radius: 10px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
