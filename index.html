@@ -17,7 +17,7 @@
   </div>
 
   <div class="container">
-    <form onsubmit="return false" class="form">
+    <form class="form">
       <button name="btn" id="login-button">
         <img src="./logo-gradient_btn.png"> Sign in with Voltox 
       </button>
@@ -49,7 +49,7 @@
     tag.addEventListener("load", (e) => {
 
       const button = document.getElementById("login-button");
-      button.addEventListener("click", async () => {
+      button.addEventListener("click", async (e) => {
         //Pass Hash Code as first parameter of login function
         //You'll receive user credentials in window.addEventListener  
         //when the user is authenticated or error if any problem 
@@ -58,7 +58,7 @@
         //You'll receive decoded user data in callback function
 
         //NOTE: You can use getDecodedData function on either server or client side
-        // e.preventDefault()
+        e.preventDefault()
         const hashCode = 'xCseBGzYIpt1+HxCGHMlZp+9/AZSctvvraaaGfsL=';
         await login(hashCode)
 
