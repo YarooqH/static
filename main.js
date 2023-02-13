@@ -1,24 +1,36 @@
   //login Function Format                             
-  login(hashCode, (response) => {                
-    console.log(response);                    
-    })
+  login(hashCode)
+
+  //login function will pop up screen where you perform liveness
+   
   
-    //login Function Response Format
-    {
-        success: boolean,
-        credentials: string || null,
-        message: string
-    }
+  //window.addEventListener Function Format
   
-    //getDecodedData Function Format
-    getDecodedData(hashCode, credentials, (decodedData) => {
-    console.log(decodedData)
-    })
+window.addEventListener(
+  "message",
+  (e) => {
+console.log(e.data)
+  },
+  false
+);
   
-    //getDecodedData Function Response Format
+    //window.addEventListener Response Format
     {
       success: boolean,
-      data: object || null,
-      message: string,
-      error: boolean
-    }
+      credentials: string || null,
+      message: string
+  }
+  
+  
+   //getDecodedData Function Format
+ getDecodedData(hashCode, credentials, (decodedData) => {
+  console.log(decodedData)
+  })
+
+  //getDecodedData Function Response Format
+  {
+    success: boolean,
+    data: object || null,
+    message: string,
+    error: boolean
+  }
